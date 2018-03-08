@@ -1,3 +1,5 @@
+// Package vcr provides an http client that can record and
+// playback responses to http requests.
 package vcr
 
 import (
@@ -15,54 +17,63 @@ import (
 	"path/filepath"
 )
 
-type Mode int
+// Mode is used to signify the current operating mode of VCR.
+type mode int
 
 const (
-	_         = iota
-	Play Mode = iota
-	Record
-	Live
+	_           = iota
+	play   mode = iota // use pre-recorded responses to http requests
+	record             // make live requests and record the responses
+	live               // make live requests (do not record the responses)
 )
 
 var (
+	// ErrInvalidMode is returned when mode is not play, record, or live.
 	ErrInvalidMode = errors.New("invalid mode")
 )
 
+// VCR is an http client that can record and playback responses to http requests.
 type VCR struct {
 	dir   string
-	mode  Mode
+	mode  mode
 	seqno int
 	Debug bool
 }
 
+// New creates a new VCR that will use dir for response storage.
 func New(dir string) *VCR {
 	return &VCR{
 		dir:  dir,
-		mode: Play,
+		mode: play,
 	}
 }
 
+// Play switches the VCR's mode to playback.
 func (v *VCR) Play() *VCR {
-	v.mode = Play
+	v.mode = play
 	v.seqno = 0
 	return v
 }
 
+// Record switches the VCR's mode to record.
 func (v *VCR) Record() *VCR {
-	v.mode = Record
+	v.mode = record
 	return v
 }
 
+// Live switches the VCR's mode to live.
 func (v *VCR) Live() *VCR {
-	v.mode = Live
+	v.mode = live
 	return v
 }
 
+// SetDir changes the storage directory.
 func (v *VCR) SetDir(dir string) {
 	v.dir = dir
 	v.seqno = 0
 }
 
+// Do makes an http request.
 func (v *VCR) Do(req *http.Request) (resp *http.Response, err error) {
 	filename, err := v.doFilename(req)
 	if err != nil {
@@ -72,17 +83,18 @@ func (v *VCR) Do(req *http.Request) (resp *http.Response, err error) {
 	defer v.incSeqno()
 
 	switch v.mode {
-	case Play:
+	case play:
 		return v.play(filename)
-	case Record:
+	case record:
 		return v.recordDo(req, filename)
-	case Live:
+	case live:
 		return v.liveDo(req)
 	}
 
 	return nil, ErrInvalidMode
 }
 
+// Get makes an http get request to url.
 func (v *VCR) Get(url string) (resp *http.Response, err error) {
 	filename, err := v.getFilename(url)
 	if err != nil {
@@ -92,17 +104,18 @@ func (v *VCR) Get(url string) (resp *http.Response, err error) {
 	defer v.incSeqno()
 
 	switch v.mode {
-	case Play:
+	case play:
 		return v.play(filename)
-	case Record:
+	case record:
 		return v.recordGet(url, filename)
-	case Live:
+	case live:
 		return v.liveGet(url)
 	}
 
 	return nil, ErrInvalidMode
 }
 
+// PostForm posts data to url.
 func (v *VCR) PostForm(url string, data url.Values) (resp *http.Response, err error) {
 	filename, err := v.postFormFilename(url, data)
 	if err != nil {
@@ -112,11 +125,11 @@ func (v *VCR) PostForm(url string, data url.Values) (resp *http.Response, err er
 	defer v.incSeqno()
 
 	switch v.mode {
-	case Play:
+	case play:
 		return v.play(filename)
-	case Record:
+	case record:
 		return v.recordPostForm(url, data, filename)
-	case Live:
+	case live:
 		return v.livePostForm(url, data)
 	}
 
@@ -124,7 +137,7 @@ func (v *VCR) PostForm(url string, data url.Values) (resp *http.Response, err er
 }
 
 func (v *VCR) incSeqno() {
-	v.seqno += 1
+	v.seqno++
 }
 
 func (v *VCR) play(filename string) (*http.Response, error) {
@@ -197,8 +210,12 @@ func (v *VCR) postFormFilename(url string, data url.Values) (string, error) {
 	// fmt.Printf("postFormFilename url: %s\n", url)
 	// fmt.Printf("postFormFilename data: %s\n", data.Encode())
 	h := sha256.New()
-	h.Write([]byte(url))
-	h.Write([]byte(data.Encode()))
+	if _, err := h.Write([]byte(url)); err != nil {
+		return "", err
+	}
+	if _, err := h.Write([]byte(data.Encode())); err != nil {
+		return "", err
+	}
 	hash := hex.EncodeToString(h.Sum(nil))
 	return v.filename("postform", hash), nil
 }
