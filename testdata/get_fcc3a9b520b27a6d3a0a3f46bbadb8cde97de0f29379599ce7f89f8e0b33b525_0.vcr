@@ -1,0 +1,440 @@
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Connection: keep-alive
+Content-Type: text/html; charset=utf-8
+Date: Thu, 08 Mar 2018 02:00:51 GMT
+Etag: W/"3d94-meWmiE9pv5CP214BxNs0oA"
+Set-Cookie: guest=lgHZIDc2ZWE0NGQ3NjgwYzg5MDkyZDMyYTE2YWZjMjNmMDA4zlqgmVPOAAFRgMDEIFij5paeN68agCXNKcYqaYyZmPgO8WGa6I2v9D8wx2NP; Max-Age=604.8; Domain=.keybase.io; Path=/; Expires=Thu, 08 Mar 2018 02:10:56 GMT; HttpOnly; Secure
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+
+3d94
+<!DOCTYPE html>
+<html>
+
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                              K E Y   B A S E
+
+                            crypto for everyone
+
+                        because no one we know ever
+                      seems to have a public key. :-(
+
+     No Google Analytics or other 3rd party hosted script tags on Keybase.
+
+     And this has the added bonus that we'll never be able to serve ad code.
+
+                                    \o/  \o/
+                                  keybase team
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+  <head>
+    <title>Keybase</title>
+    <meta       name="viewport"    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link       href="/_/brew/_/0006130a/sitewide-css.css"      rel="stylesheet">
+    
+    <script      src="/_/brew/_/fbfbc0e2/sitewide-js.js"></script>
+
+    <meta    charset="UTF-8" />
+    <meta       name="Description" content="Public key crypto for everyone, publicly auditable proofs of identity.">
+    
+    <meta property="og:image"        content="https://keybase.io/images/icons/ms-icon-310x310.png">
+    <meta property="og:image:width"  content="310">
+    <meta property="og:image:height" content="310">
+      
+    <script>
+    window.csrf_token="lgHZIDc2ZWE0NGQ3NjgwYzg5MDkyZDMyYTE2YWZjMjNmMDA4zlqgmVPOAAFRgMDEIMtkXxJfOW3PQtBM20a08wmJ3cRBDYA7NAPelXSH/dhP";
+    </script>
+  </head>
+
+  <body>
+  <div class="run-mode run-mode-prod">
+    <div class="grid-monitor"> 
+      <input id="url_base" type="hidden" value="https://keybase.io/"/>
+
+        <div id="navbar-top">
+          <div class="navbar navbar-fixed-top navbar-default" role="navigation" data-active-tab="splash">
+
+            <div class="container navbar-container">
+              <div class="row">
+
+                <div class="col-xs-2 col-sm-1">
+                  <div class="navbar-header">
+                    <div class="navbar-brand">
+                      <a href="/" aria-label="home">
+                        <img src="/images/icons/icon-keybase-logo-48.png" srcset="/images/icons/icon-keybase-logo-48@2x.png 2x" width="48" height="48" />
+                      </a>
+                    </div>
+                    <div class="staging-notice">Keybase Staging Server</div>
+                  </div>
+                </div>
+
+                <div class="col-xs-10 col-sm-5">
+                  <div class="nav-search-wrapper">
+                    <div class="input-group form-group">
+                      <input type="text" class="form-control auto-focus nav-search-input 1pw-reject" data-focus-priority="0" placeholder="Search Keybase"
+                      autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+                      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">    
+
+      <table class="nav navbar-right navbar-buttons pull-right">
+        <tr>
+          <td class="nav-job-link  hidden-sm hidden-xs"><div class="" title="Jobs">
+            
+            <span class="label label-info hidden-sm hidden-xs">New</span> <a href="/jobs" style="font-size:13px;">Keybase is hiring</a>
+          </div></td>
+
+
+        
+            <td>
+              
+              <a href="/download" class="btn btn-primary">Install</a>
+            </td>
+            <td><a onclick="return false;" href="#_" class="navbar-link link-login ">Login</a></td>
+            <td class="nav-btn "><div class="auto-tooltip" title="Encrypt"><a href="/encrypt" aria-label="encrypt"><i class="fa fa-lock"></i></a></div></td>
+            <td class="nav-btn " ><div class="auto-tooltip" title="Verify"><a href="/verify" aria-label="verify"><i class="fa fa-check"></i></a></div></td>
+            <td class="hidden-xs nav-btn "   ><div class="auto-tooltip" title="Docs"><a href="/docs" aria-label="docs"><i class="fa fa-question"></i></a></div></td>
+          
+        </tr>
+      </table>
+</div>
+
+                
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      
+      <div class="modal modal-primary" id="shared-modal" data-backdrop="static">
+      </div>
+
+      
+      <div class="content">
+        <div id="page-splash">
+  <div class="container">
+    <div class="splash-desktop hidden-xs">
+      
+<div class="splash-footer">
+
+    <div class="row">
+
+      <div class="col-sm-8 col-lg-9 kb-main-card">
+
+        
+            <h1 id="welcome-to-keybase">Welcome to Keybase</h1>
+<p style="margin-top:30px;">Keybase is a new and free security app for mobile phones and computers. For the geeks among us: it&#39;s open source and powered by public-key cryptography.</p>
+
+<p>Keybase is for anyone.  Imagine a <b>Slack</b> for the whole world,  except <i>end-to-end encrypted</i> across all your devices. Or a <b>Team Dropbox</b> where the server can&#39;t leak your files or be hacked.</p></p>
+<p><a href="/download">Download the app</a> to join.</p>
+<p><img class="img img-responsive" src="/images/blog/teams/teams-splash-announcement.png" width="1550" height="1103"></p>
+<p style="text-align:center">
+  <a href="/blog/introducing-keybase-teams">Read the new team announcement</a>
+</p>
+
+
+
+              <center style="margin:40px 0;">
+                <div class="install-badge">
+   <a href="/download"><img src="/images/getting-started/unknown_badge_450x134.png" class=""  width=225 height=67 ></a>
+   
+      <div class="other-platforms small">also available: <a href="/download">other platforms</a></div>
+    
+  </div>
+
+              </center>
+          
+
+      </div>
+
+      <div class="col-sm-4 col-lg-3 kb-sub-card">
+        <h3>Get started</h3>
+        <a href="/download">Install Keybase</a>
+        <h3 style="margin-top: 40px">Stats</h3>
+
+          Keys: <b>1,085,216</b><br>
+          Humans: <b>234,565</b><br>
+          Teams: <b>28,186</b>
+
+        <h3 style="margin-top: 40px">Some humans on Keybase</h3>
+        <table class="notable-new-list">
+        
+      <tr data-uid="a1dd57319f604e6f23c37eb0f7825c00" class="follower-row">
+        <td>
+          
+              <a href="/retronym"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/b071b16b4c5e53c77800579906a9cb05_200_200.jpg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/retronym" class="username ">retronym</a><br/>
+          <span class="small">Jason Zaugg</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="8aede248df511fa3affcbd16ec5d1a00" class="follower-row">
+        <td>
+          
+              <a href="/chrisam"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/0437fe33db7dad4a5fe694277d2bfd05_200_200_square_200.png" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/chrisam" class="username ">chrisam</a><br/>
+          <span class="small">Christopher Mills</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="477997631a6907fe812356457f1c4a00" class="follower-row">
+        <td>
+          
+              <a href="/dalmaer"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/a34faa072ce244cd8cfe1e1cde33e805_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/dalmaer" class="username ">dalmaer</a><br/>
+          <span class="small">Dion Almaer</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="0779ab38f0a83dc932dcacead8055a00" class="follower-row">
+        <td>
+          
+              <a href="/onli"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/443dcb72540578024bd2f28a013f7105_200_200_square_200.png" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/onli" class="username ">onli</a><br/>
+          <span class="small">Malte Paskuda</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="184e6df467b22211aaefe6d3c365bd00" class="follower-row">
+        <td>
+          
+              <a href="/zagy"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/2c9979ce9121fd7d518c6542eb18e005_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/zagy" class="username ">zagy</a><br/>
+          <span class="small">Christian Zagrodnick</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="d794771128feb1ef05052a3a3dbdb500" class="follower-row">
+        <td>
+          
+              <a href="/splittingred"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/aee4be9d995743de57a0c614178d6e05_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/splittingred" class="username ">splittingred</a><br/>
+          <span class="small">Shaun McCormick</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="ea862a54faf48c19f13e98dac852aa19" class="follower-row">
+        <td>
+          
+              <a href="/casado"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/a51e3fdbeaa92e72dc5152f253fd8605_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/casado" class="username ">casado</a><br/>
+          <span class="small">Martin Casado</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="cf5de333907d9c1aa110cd18c9cdfc00" class="follower-row">
+        <td>
+          
+              <a href="/buritica"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/e223cc129409efc2c7d58a36cb1f1005_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/buritica" class="username ">buritica</a><br/>
+          <span class="small">Juan Pablo Buritica</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="29f74b019ade0b044b046d0f7e622e00" class="follower-row">
+        <td>
+          
+              <a href="/hergertme"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/4b5c414f308df4e189fd2faaef882905_200_200.jpg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/hergertme" class="username ">hergertme</a><br/>
+          <span class="small">Christian Hergert</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="4c230ae8d2f922dc2ccc1d2f94890700" class="follower-row">
+        <td>
+          
+              <a href="/marcopolo"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/67a551a80db42fc190462c28e5785a05_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/marcopolo" class="username ">marcopolo</a><br/>
+          <span class="small">Marco Munizaga</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="65c8c7f0fb8663d685817e02fa9ed400" class="follower-row">
+        <td>
+          
+              <a href="/ahmadnassri"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/c9c9051afd498fbbf3f5345c49376805_200_200.jpg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/ahmadnassri" class="username ">ahmadnassri</a><br/>
+          <span class="small">Ahmad Nassri</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="9d8a3609cd5d2062c637ba3c8ded9a19" class="follower-row">
+        <td>
+          
+              <a href="/xh3b4sd"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/f59cf33f5872f7fbd8d7ba4786af7805_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/xh3b4sd" class="username ">xh3b4sd</a><br/>
+          <span class="small">Tim Schindler</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="ec5e6068bc36cc910890bc59cae28e00" class="follower-row">
+        <td>
+          
+              <a href="/jtz"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/bbdbc100d83421503839fb7f76199905_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/jtz" class="username ">jtz</a><br/>
+          <span class="small">JT Zemp</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="328ec77328873f35abb2b1142d800e00" class="follower-row">
+        <td>
+          
+              <a href="/khelek"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/a4249da648dd34ce43dde16853d14505_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/khelek" class="username ">khelek</a><br/>
+          <span class="small">Brian Johnson</span>
+        </td>
+      </tr>
+    
+      <tr data-uid="c8cd74643be51636881a0ca09a2f4f19" class="follower-row">
+        <td>
+          
+              <a href="/valo"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/d4702b84b31ca215e72b0bb799849c05_200_200_square_200.jpeg" width="50" height="50"></a>
+            
+        </td>
+        <td class="td-follower-info">
+          <a href="/valo" class="username ">valo</a><br/>
+          <span class="small">Valentin Mihov</span>
+        </td>
+      </tr>
+    
+
+        </table>
+      </div>
+
+    </div> 
+
+</div>
+
+    </div>
+    <div class="splash-mobile visible-xs">
+        <div class="row">
+    <div class="col-xs-12  kb-main-card">
+
+      <p class="lead guests-only"><b>Welcome to Keybase</b></p>
+
+      <p>
+          Keybase makes apps for every platform - apps to make chatting, privacy, and crypto easy.
+      </p>
+
+      <div class="guests-only">
+        
+<div>
+
+    <div style="float:left;width:100%;padding-left:0px;padding-right:0px"><button class="btn btn-block btn-default link-login">Existing users login</button></div>
+  
+</div>
+<div class="clearfix"></div>
+
+      </div>
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <div class="footer">
+  
+
+<div class="container text-center hidden-xs">
+  <div>
+
+    <small>
+      Keybase, 2017
+    | Available within Tor at <strong>http://fncuwbiisyh6ak3i.onion</strong><br><br>
+    </small>
+
+      <a href="/download">install Keybase</a>
+      | <a href="/blog">read our blog</a>
+      | <a href="/docs">documentation</a>
+      | <a href="https://github.com/keybase/client/issues" rel="noopener noreferrer">bug reporting</a>
+      | <a href="/docs/terms">terms</a>
+      &amp; <a href="/docs/privacypolicy">privacy</a><br><br>
+      <a href="/jobs">jobs @ keybase</a>
+    </div>
+  </div>
+</div>
+<div class="container text-center visible-xs" style="padding:20px 0">
+
+  
+
+  <div style="margin-bottom:20px">
+    <a href="https://github.com/keybase/client/issues" rel="noopener noreferrer">Please send us feedback &amp; bug reports</a>.
+  </div>
+  Keybase, 2017
+    | <a href="/blog">read our blog</a>
+    | <a href="/docs/terms">terms</a>
+    &amp; <a href="/docs/privacypolicy">privacy</a><br><br>
+      <span class="label label-info">HEY</span> <a href="/jobs">GET A JOB!</a> <span class="label label-info">/HEY</span>
+</div>
+</div>
+
+
+    </div>
+  </div>
+  <script type="text/javascript">
+    window.session = new Session()
+  </script>
+  </body>
+</html>
+
+0
+
