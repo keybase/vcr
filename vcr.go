@@ -67,6 +67,21 @@ func (v *VCR) Live() *VCR {
 	return v
 }
 
+// IsPlayback returns true if in play mode.
+func (v *VCR) IsPlayback() bool {
+	return v.mode == play
+}
+
+// IsRecording returns true if in record mode.
+func (v *VCR) IsRecording() bool {
+	return v.mode == record
+}
+
+// IsLive returns true if in live mode.
+func (v *VCR) IsLive() bool {
+	return v.mode == live
+}
+
 // SetDir changes the storage directory.
 func (v *VCR) SetDir(dir string) {
 	v.dir = dir
