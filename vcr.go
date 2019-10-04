@@ -15,7 +15,6 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
-	"strings"
 )
 
 // Mode is used to signify the current operating mode of VCR.
@@ -35,11 +34,10 @@ var (
 
 // VCR is an http client that can record and playback responses to http requests.
 type VCR struct {
-	dir               string
-	mode              mode
-	legacyGlobalSeqno int
-	seqno             map[string]int
-	Debug             bool
+	dir   string
+	mode  mode
+	seqno map[string]int
+	Debug bool
 }
 
 // New creates a new VCR that will use dir for response storage.
@@ -55,7 +53,6 @@ func New(dir string) *VCR {
 func (v *VCR) Play() *VCR {
 	v.mode = play
 	v.seqno = make(map[string]int)
-	v.legacyGlobalSeqno = 0
 	return v
 }
 
@@ -89,7 +86,6 @@ func (v *VCR) IsLive() bool {
 // SetDir changes the storage directory.
 func (v *VCR) SetDir(dir string) {
 	v.dir = dir
-	v.legacyGlobalSeqno = 0
 	v.seqno = make(map[string]int)
 }
 
@@ -158,29 +154,10 @@ func (v *VCR) PostForm(url string, data url.Values) (resp *http.Response, err er
 
 func (v *VCR) incSeqno(hash string) {
 	v.seqno[hash]++
-	v.legacyGlobalSeqno++
-}
-
-func (v *VCR) toLegacyFilename(filename string) string {
-	components := strings.Split(filename, "_")
-	newLastElement := fmt.Sprintf("%d.vcr", v.legacyGlobalSeqno)
-	components[len(components)-1] = newLastElement
-	return strings.Join(components, "_")
-}
-
-func fileMissingError(err error) bool {
-	if err == nil {
-		return false
-	}
-	return strings.Contains(err.Error(), "no such file or directory")
 }
 
 func (v *VCR) play(filename string) (*http.Response, error) {
 	data, err := ioutil.ReadFile(filename)
-	if fileMissingError(err) {
-		filename = v.toLegacyFilename(filename)
-		data, err = ioutil.ReadFile(filename)
-	}
 	if err != nil {
 		return nil, err
 	}
