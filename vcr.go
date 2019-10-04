@@ -15,6 +15,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 // Mode is used to signify the current operating mode of VCR.
@@ -34,24 +35,27 @@ var (
 
 // VCR is an http client that can record and playback responses to http requests.
 type VCR struct {
-	dir   string
-	mode  mode
-	seqno int
-	Debug bool
+	dir               string
+	mode              mode
+	legacyGlobalSeqno int
+	seqno             map[string]int
+	Debug             bool
 }
 
 // New creates a new VCR that will use dir for response storage.
 func New(dir string) *VCR {
 	return &VCR{
-		dir:  dir,
-		mode: play,
+		dir:   dir,
+		mode:  play,
+		seqno: make(map[string]int),
 	}
 }
 
 // Play switches the VCR's mode to playback.
 func (v *VCR) Play() *VCR {
 	v.mode = play
-	v.seqno = 0
+	v.seqno = make(map[string]int)
+	v.legacyGlobalSeqno = 0
 	return v
 }
 
@@ -85,17 +89,18 @@ func (v *VCR) IsLive() bool {
 // SetDir changes the storage directory.
 func (v *VCR) SetDir(dir string) {
 	v.dir = dir
-	v.seqno = 0
+	v.legacyGlobalSeqno = 0
+	v.seqno = make(map[string]int)
 }
 
 // Do makes an http request.
 func (v *VCR) Do(req *http.Request) (resp *http.Response, err error) {
-	filename, err := v.doFilename(req)
+	filename, hash, err := v.doFilename(req)
 	if err != nil {
 		return nil, err
 	}
 
-	defer v.incSeqno()
+	defer v.incSeqno(hash)
 
 	switch v.mode {
 	case play:
@@ -111,12 +116,12 @@ func (v *VCR) Do(req *http.Request) (resp *http.Response, err error) {
 
 // Get makes an http get request to url.
 func (v *VCR) Get(url string) (resp *http.Response, err error) {
-	filename, err := v.getFilename(url)
+	filename, hash, err := v.getFilename(url)
 	if err != nil {
 		return nil, err
 	}
 
-	defer v.incSeqno()
+	defer v.incSeqno(hash)
 
 	switch v.mode {
 	case play:
@@ -132,12 +137,12 @@ func (v *VCR) Get(url string) (resp *http.Response, err error) {
 
 // PostForm posts data to url.
 func (v *VCR) PostForm(url string, data url.Values) (resp *http.Response, err error) {
-	filename, err := v.postFormFilename(url, data)
+	filename, hash, err := v.postFormFilename(url, data)
 	if err != nil {
 		return nil, err
 	}
 
-	defer v.incSeqno()
+	defer v.incSeqno(hash)
 
 	switch v.mode {
 	case play:
@@ -151,12 +156,31 @@ func (v *VCR) PostForm(url string, data url.Values) (resp *http.Response, err er
 	return nil, ErrInvalidMode
 }
 
-func (v *VCR) incSeqno() {
-	v.seqno++
+func (v *VCR) incSeqno(hash string) {
+	v.seqno[hash]++
+	v.legacyGlobalSeqno++
+}
+
+func (v *VCR) toLegacyFilename(filename string) string {
+	components := strings.Split(filename, "_")
+	newLastElement := fmt.Sprintf("%d.vcr", v.legacyGlobalSeqno)
+	components[len(components)-1] = newLastElement
+	return strings.Join(components, "_")
+}
+
+func fileMissingError(err error) bool {
+	if err == nil {
+		return false
+	}
+	return strings.Contains(err.Error(), "no such file or directory")
 }
 
 func (v *VCR) play(filename string) (*http.Response, error) {
 	data, err := ioutil.ReadFile(filename)
+	if fileMissingError(err) {
+		filename = v.toLegacyFilename(filename)
+		data, err = ioutil.ReadFile(filename)
+	}
 	if err != nil {
 		return nil, err
 	}
@@ -205,38 +229,38 @@ func (v *VCR) urlHash(url string) (string, error) {
 	return hex.EncodeToString(sum[:]), nil
 }
 
-func (v *VCR) doFilename(req *http.Request) (string, error) {
+func (v *VCR) doFilename(req *http.Request) (string, string, error) {
 	hash, err := v.reqHash(req)
 	if err != nil {
-		return "", err
+		return "", "", err
 	}
-	return v.filename("do", hash), nil
+	return v.filename("do", hash), hash, nil
 }
 
-func (v *VCR) getFilename(url string) (string, error) {
+func (v *VCR) getFilename(url string) (string, string, error) {
 	hash, err := v.urlHash(url)
 	if err != nil {
-		return "", err
+		return "", "", err
 	}
-	return v.filename("get", hash), nil
+	return v.filename("get", hash), hash, nil
 }
 
-func (v *VCR) postFormFilename(url string, data url.Values) (string, error) {
+func (v *VCR) postFormFilename(url string, data url.Values) (string, string, error) {
 	// fmt.Printf("postFormFilename url: %s\n", url)
 	// fmt.Printf("postFormFilename data: %s\n", data.Encode())
 	h := sha256.New()
 	if _, err := h.Write([]byte(url)); err != nil {
-		return "", err
+		return "", "", err
 	}
 	if _, err := h.Write([]byte(data.Encode())); err != nil {
-		return "", err
+		return "", "", err
 	}
 	hash := hex.EncodeToString(h.Sum(nil))
-	return v.filename("postform", hash), nil
+	return v.filename("postform", hash), hash, nil
 }
 
 func (v *VCR) filename(prefix, hash string) string {
-	return filepath.Join(v.dir, fmt.Sprintf("%s_%s_%d.vcr", prefix, hash, v.seqno))
+	return filepath.Join(v.dir, fmt.Sprintf("%s_%s_%d.vcr", prefix, hash, v.seqno[hash]))
 }
 
 func (v *VCR) encodeResponse(resp *http.Response) ([]byte, error) {
