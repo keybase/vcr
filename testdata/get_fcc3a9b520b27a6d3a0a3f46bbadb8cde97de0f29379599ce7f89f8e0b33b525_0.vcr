@@ -1,16 +1,13 @@
-HTTP/1.1 200 OK
-Transfer-Encoding: chunked
-Connection: keep-alive
+HTTP/2.0 200 OK
 Content-Type: text/html; charset=utf-8
-Date: Fri, 08 Jun 2018 18:40:39 GMT
-Etag: W/"3d79-sA1Q4Kmaylna1/JI9bDwEfWXQtg"
-Set-Cookie: guest=lgHZIDNiOTY4ZWE5MDhlMGRkODQ0NDJiNDdhNjY0NTdmZjA4zlsazafOAAFRgMDEINK9l%2BS25Br4xtXssLbebJfGblLNQ6nZ1%2FxTuEwldbxE; Max-Age=604; Domain=.keybase.io; Path=/; Expires=Fri, 08 Jun 2018 18:50:44 GMT; HttpOnly; Secure
+Date: Fri, 04 Oct 2019 15:39:21 GMT
+Etag: W/"4361-1cjaz6Wfl4M/436s3ELGIcb5PsY"
+Set-Cookie: guest=lgHZIDVkYzc5YTVkZTVjMTllOWQ2ZDUwYzY5YTBjZTM4MTA4zl2XZ6nOAAFRgMDEIAlWvG47FZzGLJ4YRchUYiG%2FRXteWChuDoTkOgTN%2FIfr; Max-Age=604; Domain=.keybase.io; Path=/; Expires=Fri, 04 Oct 2019 15:49:26 GMT; HttpOnly; Secure
 Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
 
-3d79
 <!DOCTYPE html>
 <html>
 
@@ -35,23 +32,21 @@ X-Xss-Protection: 1; mode=block
   <head>
     <title>Keybase</title>
     <meta       name="viewport"    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link       href="/_/brew/_/bbb17d44/sitewide-css.css"      rel="stylesheet">
+    <link       href="/_/brew/_/113aa9a6/sitewide-css.css"      rel="stylesheet">
     
-    <script      src="/_/brew/_/340ab418/sitewide-js.js"></script>
+    <script      src="/_/brew/_/2090c004/sitewide-js.js"></script>
 
     <meta    charset="UTF-8" />
-    <meta       name="Description" content="Public key crypto for everyone, publicly auditable proofs of identity.">
     
-    <meta property="og:image"        content="https://keybase.io/images/icons/ms-icon-310x310.png">
-    <meta property="og:image:width"  content="310">
-    <meta property="og:image:height" content="310">
-      
+
+<meta name="Description" content="Keybase is for keeping everyone's chats and files safe, from families to communities to companies. MacOS, Windows, Linux, iPhone, and Android."><meta property="og:description" content="Keybase is for keeping everyone's chats and files safe, from families to communities to companies. MacOS, Windows, Linux, iPhone, and Android."><meta name="twitter:description" content="Keybase is for keeping everyone's chats and files safe, from families to communities to companies. MacOS, Windows, Linux, iPhone, and Android.">
+
     <script>
-    window.csrf_token="lgHZIDNiOTY4ZWE5MDhlMGRkODQ0NDJiNDdhNjY0NTdmZjA4zlsazafOAxcEAMDEIPAmn0ifVhr8rfBAIHEpHDf9xK1z8tg5+8g8gzmn4zCb";
+    window.csrf_token="lgHZIDVkYzc5YTVkZTVjMTllOWQ2ZDUwYzY5YTBjZTM4MTA4zl2XZ6nOAxcEAMDEIFKUbK1scpjx0YgSzTCM9jfci4vqOJGplilr9CQuvycG";
     </script>
   </head>
 
-  <body>
+  <body id="">
   <div class="run-mode run-mode-prod">
     <div class="grid-monitor"> 
       <input id="url_base" type="hidden" value="https://keybase.io/"/>
@@ -78,7 +73,7 @@ X-Xss-Protection: 1; mode=block
                     <div class="input-group form-group">
                       <input type="text" class="form-control auto-focus nav-search-input 1pw-reject" data-focus-priority="0" placeholder="Search Keybase"
                       autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
-                      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                      <span class="input-group-addon"><i class="fas fa-search"></i></span>
                     </div>
                   </div>
                 </div>
@@ -99,9 +94,9 @@ X-Xss-Protection: 1; mode=block
               <a href="/download" class="btn btn-primary">Install</a>
             </td>
             <td><a onclick="return false;" href="#_" class="navbar-link link-login ">Login</a></td>
-            <td class="nav-btn "><div class="auto-tooltip" title="Encrypt"><a href="/encrypt" aria-label="encrypt"><i class="fa fa-lock"></i></a></div></td>
-            <td class="nav-btn " ><div class="auto-tooltip" title="Verify"><a href="/verify" aria-label="verify"><i class="fa fa-check"></i></a></div></td>
-            <td class="hidden-xs nav-btn "   ><div class="auto-tooltip" title="Docs"><a href="/docs" aria-label="docs"><i class="fa fa-question"></i></a></div></td>
+            <td class="nav-btn "><div class="auto-tooltip" title="Encrypt"><a href="/encrypt" aria-label="encrypt"><i class="fas fa-lock"></i></a></div></td>
+            <td class="nav-btn " ><div class="auto-tooltip" title="Verify"><a href="/verify" aria-label="verify"><i class="fas fa-check"></i></a></div></td>
+            <td class="hidden-xs nav-btn "   ><div class="auto-tooltip" title="Docs"><a href="/docs" aria-label="docs"><i class="fas fa-question"></i></a></div></td>
           
         </tr>
       </table>
@@ -114,6 +109,16 @@ X-Xss-Protection: 1; mode=block
             </div>
           </div>
         </div>
+
+
+<div id="autoreset-event-error" class="container alert alert-warning" style="text-align:center; display:none;">
+  <span id="autoreset-event-error-msg">  </span>
+  <button type="button" class="close"><span id="autoreset-event-error-close">×</span></button>
+</div>
+<div id="autoreset-event-success" class="container alert alert-success" style="text-align:center; display:none;">
+  <span id="autoreset-event-success-msg">  </span>
+  <button type="button" class="close"><span id="autoreset-event-success-close">×</span></button>
+</div>
 
 
 
@@ -132,31 +137,50 @@ X-Xss-Protection: 1; mode=block
 
     <div class="row">
 
-      <div class="col-sm-8 col-lg-9 kb-main-card">
+      <div class="col-sm-8 col-lg-9 kb-main-card" >
 
-        
-            <h1 id="welcome-to-keybase">Welcome to Keybase</h1>
-<p style="margin-top:30px;">Keybase is a new and free security app for mobile phones and computers. For the geeks among us: it&#39;s open source and powered by public-key cryptography.</p>
+            <h1 style="margin-bottom:30px;">Secure groups<span class="hidden-sm">, files,</span> and chat for everyone!</h1>
 
-<p>Keybase is for anyone.  Imagine a <b>Slack</b> for the whole world,  except <i>end-to-end encrypted</i> across all your devices. Or a <b>Team Dropbox</b> where the server can&#39;t leak your files or be hacked.</p></p>
-<p><a href="/download">Download the app</a> to join.</p>
-<p><img class="img img-responsive" src="/images/blog/teams/teams-splash-announcement.png" width="1550" height="1103"></p>
-<p style="text-align:center">
-  <a href="/blog/introducing-keybase-teams">Read the new team announcement</a>
-</p>
+<p>Communities, families, friends, schools, and companies.  Keybase is for everyone, and it&#39;s growing fast. Unlike Slack, it is free. And without ads.</p>
+<p>If your data is in the cloud, it should be encrypted. If you&#39;re putting people together, give Keybase a try.</p>
+
+            <p>
+              <b><a href="/download">Get Keybase</a>
+</b> to get started.
+            </p>
+
+            <md id="splash-screenshot">
+              <img id="screenshot1" class="img img-responsive" src="/images/screenshots/keybase-nav-v2.png">
+              </md>
+
+            <h1>
+              Public, signed files.
+            </h1>
+
+            <p>Keybase is also a big directory of public folders. Yours will be: <code>/keybase/public/your_username</code>. </p>
+
+            <p>
+              <b><a href="/download">Get Keybase</a>
+</b> to get started.
+            </p>
+
+            <p><img id="screenshot2" class="img img-responsive" src="/images/screenshots/keybase-nav-v2-files.png"></p>
 
 
-
-              <center style="margin:40px 0;">
+                          <center style="margin:40px 0;">
                 <div class="install-badge">
-   <a href="/download"><img src="/images/getting-started/unknown_badge_450x134.png" class=""  width=225 height=67 ></a>
-   
-      <div class="other-platforms small">also available: <a href="/download">other platforms</a></div>
-    
-  </div>
+      <a href="/download"><img src="/images/getting-started/unknown_badge_450x134.png" class=""  width=225 height=67 ></a>
+      
+         <div class="other-platforms small">also available: <a href="/download">other platforms</a></div>
+       
+     </div>
 
               </center>
-          
+
+
+
+
+
 
       </div>
 
@@ -165,190 +189,190 @@ X-Xss-Protection: 1; mode=block
         <a href="/download">Install Keybase</a>
         <h3 style="margin-top: 40px">Stats</h3>
 
-          Keys: <b>1,254,789</b><br>
-          Humans: <b>262,769</b><br>
-          Teams: <b>36,541</b>
+          Keys: <b>2,727,136</b><br>
+          Humans: <b>539,104</b><br>
+          Teams: <b>78,039</b>
 
         <h3 style="margin-top: 40px">Some humans on Keybase</h3>
         <table class="notable-new-list">
         
-      <tr data-uid="7faf2a173cd866038a106a3669802f00" class="follower-row">
+      <tr data-uid="d5291c0f313bd68c1c5644881e69a519" class="follower-row">
         <td>
           
-              <a href="/mortman"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/4fe625291e3ad2ba869a9d9067379f05_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/TexSoulMan"><img class="img img-circle" src="/images/no-photo/placeholder-avatar-180-x-180.png" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/mortman" class="username ">mortman</a><br/>
-          <span class="small">David Mortman</span>
+          <a href="/TexSoulMan" class="username ">TexSoulMan</a><br/>
+          <span class="small"></span>
         </td>
       </tr>
     
-      <tr data-uid="9121f2ee6a5beee2108c8a4e1a75a319" class="follower-row">
+      <tr data-uid="7842797933e0209a32c00969cdd6ba00" class="follower-row">
         <td>
           
-              <a href="/if1live"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/3eda08840b696d34996218d021a79f05_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/agentdarkapple"><img class="img img-circle" src="/images/no-photo/placeholder-avatar-180-x-180.png" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/if1live" class="username ">if1live</a><br/>
-          <span class="small">libsora</span>
+          <a href="/agentdarkapple" class="username ">agentdarkapple</a><br/>
+          <span class="small">AgentDarkApple</span>
         </td>
       </tr>
     
-      <tr data-uid="72ea3930ed3c176a85a98ca43c91d800" class="follower-row">
+      <tr data-uid="5a4bb2cd04438b5f413b9ffb81aec400" class="follower-row">
         <td>
           
-              <a href="/jtolds"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/e39d97fbd6d643e31c729ee93995d705_200_200.jpeg" width="50" height="50"></a>
+              <a href="/Wh1t3Rabbit"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/59ad8740b0357a74cce0eadc632f9605_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/jtolds" class="username ">jtolds</a><br/>
-          <span class="small">JT Olio</span>
+          <a href="/Wh1t3Rabbit" class="username ">Wh1t3Rabbit</a><br/>
+          <span class="small">Rafal Los</span>
         </td>
       </tr>
     
-      <tr data-uid="e25f64295614b2f85b581e9edf5aae19" class="follower-row">
+      <tr data-uid="5b1e99759dd653ea52eb577310f59019" class="follower-row">
         <td>
           
-              <a href="/sandwiches"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/29ed3a81b5d54b0ba81b5513ca10d005_200_200.jpg" width="50" height="50"></a>
+              <a href="/troyhunt"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/c9475551c10acdb11c6dd7f90882a005_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/sandwiches" class="username ">sandwiches</a><br/>
-          <span class="small">Sandwich</span>
+          <a href="/troyhunt" class="username ">troyhunt</a><br/>
+          <span class="small">Troy Hunt</span>
         </td>
       </tr>
     
-      <tr data-uid="f08aefc116d23b8959384016e23d1200" class="follower-row">
+      <tr data-uid="cb49c1e8ddf7b9549c885fa11b129419" class="follower-row">
         <td>
           
-              <a href="/dmytri"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/d4d3432f9a7e43290d95a6c24130d005_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/icereval"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/5db3c6583e451660b538366bdba0c805_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/dmytri" class="username ">dmytri</a><br/>
-          <span class="small">Dmytri Kleiner</span>
+          <a href="/icereval" class="username ">icereval</a><br/>
+          <span class="small">Michael Haselton</span>
         </td>
       </tr>
     
-      <tr data-uid="883fed3737e63fc643ec70aa996fa100" class="follower-row">
+      <tr data-uid="c39204873fb8746b2c45b6ed8608ab00" class="follower-row">
         <td>
           
-              <a href="/segphault"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/9a6676f8dabe9d6081213306d9827005_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/stevenf"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/aa3dc5bca21252f94b9be2cefc86c005_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/segphault" class="username ">segphault</a><br/>
-          <span class="small">Ryan Paul</span>
+          <a href="/stevenf" class="username ">stevenf</a><br/>
+          <span class="small">Steven Frank</span>
         </td>
       </tr>
     
-      <tr data-uid="64d8940b666e170d034fba3fa8186000" class="follower-row">
+      <tr data-uid="30b328e8f67e2bfd341e7238b8557400" class="follower-row">
         <td>
           
-              <a href="/benwyrosdick"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/ced5a585c157e24a7645f3a04a3f2b05_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/emory"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/35818f53053eb823025290baef3fb005_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/benwyrosdick" class="username ">benwyrosdick</a><br/>
-          <span class="small">Ben Wyrosdick</span>
+          <a href="/emory" class="username ">emory</a><br/>
+          <span class="small">Emory Lundberg (he, him)</span>
         </td>
       </tr>
     
-      <tr data-uid="c8f16aa98bb63b1ecc48c20a93b9e900" class="follower-row">
+      <tr data-uid="493e44c132320f639afc31f01a93ca00" class="follower-row">
         <td>
           
-              <a href="/splorp"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/dca1b56065752f0c345140804c558e05_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/zarf"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/46d5b606b5855543e09b6d99a5844e05_200_200_square_200.png" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/splorp" class="username ">splorp</a><br/>
-          <span class="small">Grant Hutchinson</span>
+          <a href="/zarf" class="username ">zarf</a><br/>
+          <span class="small">Andrew Plotkin</span>
         </td>
       </tr>
     
-      <tr data-uid="ac4c86a4043adf34aca035cde93cf400" class="follower-row">
+      <tr data-uid="d73af57c418a917ba6665575eba13500" class="follower-row">
         <td>
           
-              <a href="/dwillis"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/64ab11f53c9a8caa654ee683dafc2805_200_200.jpg" width="50" height="50"></a>
+              <a href="/adamjspooner"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/172abc86062c9e955d274018a7245c05_200_200_square_200.jpeg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/dwillis" class="username ">dwillis</a><br/>
-          <span class="small">Derek Willis</span>
+          <a href="/adamjspooner" class="username ">adamjspooner</a><br/>
+          <span class="small">Adam Spooner</span>
         </td>
       </tr>
     
-      <tr data-uid="6444dd09a921f99dc63aa1778fba6419" class="follower-row">
+      <tr data-uid="bdc461b8d6a093b6f7fcb27b0dc08619" class="follower-row">
         <td>
           
-              <a href="/kelly_picwell"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/66dfdaf44554006d432f07edd8d9fe05_200_200_square_200.png" width="50" height="50"></a>
+              <a href="/maniart"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/13b306a021cc6d09512cb671820d3905_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/kelly_picwell" class="username ">kelly_picwell</a><br/>
-          <span class="small">Kelly Mathews</span>
+          <a href="/maniart" class="username ">maniart</a><br/>
+          <span class="small">Mani Nilchiani</span>
         </td>
       </tr>
     
-      <tr data-uid="d8feac355a32507762ef7283a11b4f00" class="follower-row">
+      <tr data-uid="f55aea9ee91795d7784d274383989d00" class="follower-row">
         <td>
           
-              <a href="/dascritch"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/cf55087937be176a5e19487f63eec205_200_200_square_200.png" width="50" height="50"></a>
+              <a href="/mrb"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/791eee0e0fcbb5fb7791b09ca3db3405_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/dascritch" class="username ">dascritch</a><br/>
-          <span class="small">Xavier Mouton-Dubosc</span>
+          <a href="/mrb" class="username ">mrb</a><br/>
+          <span class="small">Michael R. Bernstein</span>
         </td>
       </tr>
     
-      <tr data-uid="da7114ed948e3521687b7bc48766af00" class="follower-row">
+      <tr data-uid="a00928bbcec51feebb9023e944ec0c19" class="follower-row">
         <td>
           
-              <a href="/rafiot"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/9b156853c0c35c24c30406b5a012cf05_200_200_square_200.png" width="50" height="50"></a>
+              <a href="/nugster"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/7af1ad36f7638e53c87d3a297f359505_200_200.jpg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/rafiot" class="username ">rafiot</a><br/>
-          <span class="small">Raphaël Vinot</span>
+          <a href="/nugster" class="username ">nugster</a><br/>
+          <span class="small">Nugie Lim</span>
         </td>
       </tr>
     
-      <tr data-uid="2e2b2157b8764c8ea213ef84f1492e00" class="follower-row">
+      <tr data-uid="a7a7854d74de0355861f7e825899fb19" class="follower-row">
         <td>
           
-              <a href="/nikola"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/af20b1f9897920ffe2dbc21d1da20405_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/aearly"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/3eee6bbf57519d6aa4e4dcf5c2711b05_200_200_square_200.png" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/nikola" class="username ">nikola</a><br/>
-          <span class="small">Nikola Plejić</span>
+          <a href="/aearly" class="username ">aearly</a><br/>
+          <span class="small">Alex Early</span>
         </td>
       </tr>
     
-      <tr data-uid="9535890fe9abbdafa6d1adc66ce89700" class="follower-row">
+      <tr data-uid="68cd1a523a2f2f83f0732ffcb56e1619" class="follower-row">
         <td>
           
-              <a href="/spierenburg"><img class="img img-circle" src="/images/no-photo/placeholder-avatar-180-x-180.png" width="50" height="50"></a>
+              <a href="/smokyish"><img class="img img-circle" src="/images/no-photo/placeholder-avatar-180-x-180.png" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/spierenburg" class="username ">spierenburg</a><br/>
-          <span class="small">Sander Spierenburg</span>
+          <a href="/smokyish" class="username ">smokyish</a><br/>
+          <span class="small"></span>
         </td>
       </tr>
     
-      <tr data-uid="b8048b262b89c1322514cded48eff600" class="follower-row">
+      <tr data-uid="70004716addba0de8ef6faa5fa1f1019" class="follower-row">
         <td>
           
-              <a href="/scoates"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/53f03b3a8502a7dc48bd460f6bd3e805_200_200_square_200.jpeg" width="50" height="50"></a>
+              <a href="/amro"><img class="img img-circle" src="https://s3.amazonaws.com/keybase_processed_uploads/18029b1250af2f11715415ab3e3d0005_200_200.jpeg" width="50" height="50"></a>
             
         </td>
         <td class="td-follower-info">
-          <a href="/scoates" class="username ">scoates</a><br/>
-          <span class="small">Sean Coates</span>
+          <a href="/amro" class="username ">amro</a><br/>
+          <span class="small">Amro Mousa</span>
         </td>
       </tr>
     
@@ -363,24 +387,33 @@ X-Xss-Protection: 1; mode=block
     </div>
     <div class="splash-mobile visible-xs">
         <div class="row">
-    <div class="col-xs-12  kb-main-card">
+    <div class="col-xs-12 kb-main-card">
 
-      <p class="lead guests-only"><b>Welcome to Keybase</b></p>
+        <h1 style="margin-bottom:30px;">Secure groups<span class="hidden-sm hidden-xs">, files,</span> and chat for everyone!</h1>
 
-      <p>
-          Keybase makes apps for every platform - apps to make chatting, privacy, and crypto easy.
-      </p>
+<p>Communities, families, friends, schools, and companies.  Keybase is for everyone, and it&#39;s growing fast. Unlike Slack, it is free and encrypted. And without ads.</p>
+<p>If you&#39;re putting people together, give Keybase a try. We&#39;re growing fast for a reason.</p>
 
-      <div class="guests-only">
-        
-<div>
+          <p>
+            <b><a href="/download">Get Keybase</a>
+</b> to get started.
+          </p>
+          <p><img class="img img-responsive" src="/images/screenshots/keybase-nav-v2.png"></p>
 
-    <div style="float:left;width:100%;padding-left:0px;padding-right:0px"><button class="btn btn-block btn-default link-login">Existing users login</button></div>
-  
-</div>
-<div class="clearfix"></div>
 
-      </div>
+           <h1>
+              Public, signed files.
+            </h1>
+
+            <p>Keybase is also a big directory of public folders. Yours will be: <code>/keybase/public/your_username</code>. </p>
+
+            <p>
+              <b><a href="/download">Get Keybase</a>
+</b> to get started.
+            </p>
+
+          <p><img id="screenshot2" class="img img-responsive" src="/images/screenshots/keybase-nav-v2-files.png"></p>
+
 
     </div>
   </div>
@@ -398,14 +431,15 @@ X-Xss-Protection: 1; mode=block
   <div>
 
     <small>
-      Keybase, 2018
-    | Available within Tor at <strong>http://fncuwbiisyh6ak3i.onion</strong><br><br>
+      Keybase, 2019
+    | Available within Tor at <strong>http://keybase5wmilwokqirssclfnsqrjdsi7jdir5wy7y7iu3tanwmtp6oid.onion</strong><br/><br/>
+
     </small>
 
       <a href="/download">install Keybase</a>
       | <a href="/blog">read our blog</a>
       | <a href="/docs">documentation</a>
-      | <a href="https://github.com/keybase/client/issues" rel="noopener noreferrer">bug reporting</a>
+      | <a href="/docs/bug_reporting">bug reporting</a>
       | <a href="/docs/terms">terms</a>
       &amp; <a href="/docs/privacypolicy">privacy</a><br><br>
       <a href="/jobs">jobs @ keybase</a>
@@ -419,7 +453,7 @@ X-Xss-Protection: 1; mode=block
   <div style="margin-bottom:20px">
     <a href="https://github.com/keybase/client/issues" rel="noopener noreferrer">Please send us feedback &amp; bug reports</a>.
   </div>
-  Keybase, 2018
+  Keybase, 2019
     | <a href="/blog">read our blog</a>
     | <a href="/docs/terms">terms</a>
     &amp; <a href="/docs/privacypolicy">privacy</a><br><br>
@@ -432,9 +466,7 @@ X-Xss-Protection: 1; mode=block
   </div>
   <script type="text/javascript">
     window.session = new Session()
+    window.run_mode = "prod";
   </script>
   </body>
 </html>
-
-0
-
